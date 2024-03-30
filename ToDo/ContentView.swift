@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            List {
-                ForEach(0...3, id: \.self) { todo in
-                    Text("Hello")
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach(0 ... 3, id: \.self) { _ in
+                        Text("Hello")
+                    }
                 }
             }
-            
+            .navigationTitle("ToDo")
         }
     }
 }
