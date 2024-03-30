@@ -18,7 +18,21 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("ToDo")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        //
+                    } label: {
+                        Text("Add ToDo")
+                    }
+                }
+            }
         }
+    }
+
+    struct ToDo: Identifiable, Equatable {
+        var id = UUID()
+        var task: String
     }
 }
 
